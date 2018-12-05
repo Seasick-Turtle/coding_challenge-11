@@ -10,11 +10,12 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 .container {
   display: grid;
-  grid-gap: 1em;
+  // grid-gap: 1em;
   grid-template-areas: 
   "header"
   "main"
@@ -40,6 +41,10 @@ body {
   }
 }
 
+.container__section__cta {
+  flex-flow: column;
+}
+
 .container__section__stats {
   display: flex;
   align-content: center;
@@ -48,4 +53,9 @@ body {
 
 .container__section__footer {
   grid-area: footer;
+  background-color: hsl(192, 100%, 9%);
+}
+
+.footer__img {
+  grid-area: main;
 }
