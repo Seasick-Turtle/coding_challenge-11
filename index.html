@@ -9,6 +9,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Huddle landing page with alternating sections</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -17,63 +20,71 @@
   </style>
 </head>
 
-<body>
-  <header>
+<body class="container">
+  <header class='container__header'>
     <!-- Logo -->
-    <h1>Logo</h1>
-    <button>Try it free</button>
+    <img src="./images/logo.svg" alt="humble-logo">
+    <button class="btn btn__try">Try It Free</button>
   </header>
   <main>
-    <section>
-      <h1>Build The Community Your Fans Will Love</h2>
-        <p>Huddle re-imagines the way we build communities. You have a voice, but so does
+    <section class="container__section container__section--top">
+      <span class="container__header__cta">Build The Community Your Fans Will Love</span>
+        <p class="container__header__paragraph">Huddle re-imagines the way we build communities. You have a voice, but so does
           your audience. Create connections with your users as you engage in genuine discussion.</p>
-        <button>Get Started For Free</button>
+        <button class="btn btn__free">Get Started For Free</button>
+        <img class="container__top-img" src="./images/screen-mockups.svg" alt="mobile-desktop-screen-mockups">
     </section>
-    <!-- Image -->
-    <section>
+    <section class="container__section container__section__stats">
       <!-- Stats & image-->
       <span>
+        <img src="./images/icon-communities.svg" alt="magenta-community-icon">
         <h1>1.4k+</h2>
           Communities Formed
       </span>
       <span>
+        <img src="./images/icon-messages.svg" alt="magenta-message-icon">
         <h1>2.7m+</h2>
           Messages Sent
       </span>
     </section>
-    <section>
-      <!-- Image -->
-      <h3>Grow Together</h3>
-      <p>Generate meaningful discussions with your audience and build a strong, loyal community.
-        Think of the insightful conversations you miss out on with a feedback form.</p>
+    <section class="container__section mid container__section__grow">
+      <img class="container__img" src="./images/illustration-grow-together.svg" alt="">
+      <div>
+        <h3>Grow Together</h3>
+        <p>Generate meaningful discussions with your audience and build a strong, loyal community.
+          Think of the insightful conversations you miss out on with a feedback form.</p>
+      </div>
+      
     </section>
-    <section>
-      <!-- Image -->
+    <section class="container__section mid container__section__flow">
+      <img class="container__img" src="./images/illustration-flowing-conversation.svg" alt="">
       <h3>Flowing Conversations</h3>
       <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads have
         just-in-time loading for a more natural flow.</p>
     </section>
-    <section>
-      <!-- Image -->
+    <section class="container__section mid container__section__users">
+      <img class="container__img" src="./images/illustration-your-users.svg" alt="">
       <h3>Your Users</h3>
       <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means,
         once signed in to your app, your users can start chatting immediately.</p>
     </section>
-    <section>
+    <section class="container__section container__section__cta">
       <h1>Ready To Build Your Community?</h1>
       <button>Get Started For Free</button>
+      <img src="./images/bg-footer-top-desktop.svg" alt="" class="footer__img">
+
     </section>
   </main>
-  <footer>
-    <section>
+  <footer class="container__section__footer">
+
+    <section class="container__section">
       <!-- Logo -->
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia
         vestibulum a, ultrices quis sem.</p>
       <p>Phone: +1-543-123-4567</p>
       <p>example@huddle.com</p>
     </section>
-    <section>
+    <section class="container__section">
 
       Newsletter
       To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never

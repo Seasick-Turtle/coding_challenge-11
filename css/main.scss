@@ -1,0 +1,126 @@
+// variables
+$pink: hsl(322, 100%, 66%);
+
+// mixins
+@mixin headings {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+@mixin sections {
+  grid-area: main;
+  display: flex;
+}
+
+// general css
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 99vw;
+}
+
+// classes
+.btn {
+  border-radius: 2em;
+}
+
+.btn__try {
+    color: $pink;
+    background: white;
+    border: 2px solid $pink;
+    width: 9em;
+  }
+
+.btn__free {
+  margin-top: 4em;
+  align-self: center;
+  width: 24em;
+  color: white;
+  background: $pink;
+  border: 2px solid $pink;
+  font-weight: 600;
+  height: 4em;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer"
+}
+
+.container__top-img {
+  margin-top: 6em;
+  align-self: center;
+  width: 80%;
+}
+
+.container__header {
+  padding: 3em 3em;
+  margin-bottom: 10em;
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__section {
+  @include sections();
+}
+
+.container__section__grow {
+  justify-content: space-around;
+
+  .container__img {
+    order: 2;
+    width:  50%;
+    height: auto;
+  }
+}
+
+.container__section--top {
+  flex-flow: column; 
+  justify-content: center;
+
+  .container__header__cta {
+    text-align: center;
+    margin-bottom: .6em;
+
+    @include headings;
+    font-size: 2.5rem;
+  }
+}
+
+.container__header__paragraph {
+  text-align: center;
+  max-width: 33%;
+  margin: auto;
+}
+
+.container__section__cta {
+  flex-flow: column;
+}
+
+.container__section__stats {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.container__section__footer {
+  grid-area: footer;
+  background-color: hsl(192, 100%, 9%);
+}
+
+.footer__img {
+  grid-area: main;
+}
+
+.mid {
+  justify-content: center
+}
